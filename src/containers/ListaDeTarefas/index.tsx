@@ -1,28 +1,10 @@
 import Tarefa from '../../components/Tarefa'
 import { Container } from './style'
-import * as enums from '../../utils/enums/Tarefa'
+import { useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
 
 const ListaDeTarefas = () => {
-  const tarefas = [
-    {
-      titulo: 'estudar JavaScript',
-      descricao: 'ver aula do curso',
-      prioridade: enums.prioridade.IMPORTANTE,
-      status: enums.status.PENDENTE
-    },
-    {
-      titulo: 'estudar JavaScript',
-      descricao: 'ver aula do curso',
-      prioridade: enums.prioridade.NORMAL,
-      status: enums.status.PENDENTE
-    },
-    {
-      titulo: 'estudar JavaScript',
-      descricao: 'ver aula do curso',
-      prioridade: enums.prioridade.URGENTE,
-      status: enums.status.CONCLUIDA
-    }
-  ]
+  const { tarefas } = useSelector((state: RootReducer) => state)
 
   return (
     <Container>
