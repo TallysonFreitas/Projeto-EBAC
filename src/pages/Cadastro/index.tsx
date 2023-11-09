@@ -1,5 +1,13 @@
+import BarraLateral from '../../containers/Barralateral'
+import Formulario from '../../containers/Formulario'
+
 const Cadastro = () => {
-  return <div>ola mundo</div>
+  return (
+    <>
+      <BarraLateral mostrarFiltros={false} />
+      <Formulario />
+    </>
+  )
 }
 
 export default Cadastro
